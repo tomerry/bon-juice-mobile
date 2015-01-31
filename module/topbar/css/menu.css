@@ -1,7 +1,7 @@
-.topbar-menu{
+.topbar-menu {
 }
 
-.topbar-menu-body{
+.topbar-menu-body {
     display: none;
     position: fixed;
     top: 50px;
@@ -9,5 +9,5 @@
     left: 0px;
     right: 0px;
     background-color: #f6a231;
-    z-index: 30000;
+    z-index: 3000;
 }

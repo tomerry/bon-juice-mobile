@@ -12,7 +12,7 @@ body {
 }
 
 .topbar {
-    margin: 10px;
+    margin: 10px 20px;
     overflow: hidden;
     line-height: 30px;
     height: 30px;
@@ -26,9 +26,16 @@ body {
     float: right;
 }
 
+.topbar .close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+
 @import url('./login.css?__inline');
 @import url('./menu.css?__inline');
 @import url('./reget.css?__inline');
 @import url('./register.css?__inline');
 @import url('./share.css?__inline');
+@import url('./user.css?__inline');
 

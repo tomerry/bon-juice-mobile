@@ -1,0 +1,15 @@
+.topbar-user-mask {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    opacity: 0.9;
+    background-color: #ffffff;
+    z-index: 3000;
+}
+
+.topbar-user .close, .topbar-user .register, .topbar-user .login, .topbar-user .reget {
+    text-decoration: underline;
+}
