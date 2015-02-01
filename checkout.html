@@ -18,7 +18,9 @@
 }
 
 .step {
-    border-bottom: 1px solid #4d4d4d;
+    border-bottom: 1px solid #d88d8d;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .content h3 {
@@ -26,7 +28,7 @@
     text-align: left;
     font-weight: bold;
     border-bottom: 1px solid #4d4d4d;
-
+    padding-bottom: 30px;
 }
 
 .product h4 {
@@ -43,6 +45,23 @@
 
 .product .price {
     font-size: 18px;
+}
+
+.address .button {
+    width: 100% !important;
+}
+
+.payment .field {
+    margin: 10px 0px;
+}
+
+.sure {
+    text-align: center;
+}
+
+.sure .button {
+    width: 180px !important;
+    margin-top: 50px;
 }</style>
 </head>
 <body>
@@ -91,10 +110,11 @@
 }
 
 #widget_topbar .dialogbody {
-    margin: 70px 20px;
+    margin: 70px 20px 150px 20px;
     text-align: center;
 }
-#widget_topbar  .ui.form{
+
+#widget_topbar .ui.form {
     padding-bottom: 20px;
 }
 
@@ -416,33 +436,149 @@
         <h3>
             结算
         </h3>
-        <div class="step">
 
+
+        <h4>
+            订单
+        </h4>
+
+        <div class="step">
+            <dl>
+                <dt>三天排毒清体×1</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
+            <dl>
+                <dt>礼品卡×1</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
+            <dl>
+                <dt>配送日期</dt>
+                <dd>--</dd>
+                <dd>--</dd>
+            </dl>
+            <dl>
+                <dt>小结</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
+            <dl>
+                <dt>优惠码</dt>
+                <dd>--</dd>
+            </dl>
+            <dl>
+                <dt>总计</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
         </div>
 
         <h4>
             配送地址
         </h4>
-        <div class="step">
 
+        <div class="step address">
+            <div class="ui form">
+                <div class="field">
+                    <label>姓名</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>省份</label>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>城市</label>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>地区</label>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>街道地址</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>联系电话</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>优惠码</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>其他备注</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+
+                <div class="ui orange button big">保存配送地址</div>
+            </div>
         </div>
 
         <h4>
             选择配送日期
         </h4>
-        <div class="step">
 
+        <div class="step">
+            <p>每日清晨新鲜压榨</p>
+
+            <p>请于收到后</p>
         </div>
 
         <h4>
             付款方式
         </h4>
 
-        <div class="step">
+        <div class="step payment">
+            <p>请选择付款方式</p>
 
+            <div class="field">
+                <div class="ui">
+                    <input type="radio" id="p3a1" name="payment" value="1" checked>
+                    <label for="p3a1">微信支付</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui">
+                    <input type="radio" id="p3a2" name="payment" value="2">
+                    <label for="p3a2">礼品卡</label>
+                </div>
+            </div>
         </div>
 
-        <div class="step">
+        <div class="step sure">
+            <div class="ui orange button big">确认下单</div>
 
         </div>
     </div>
@@ -577,6 +713,12 @@
         render: function() {
             var t = new bonjuice.view.widget_topbar();
             this.$(".top").append(t.$el);
+            $('.ui.dropdown').dropdown();
+
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_flat-blue',
+                radioClass: 'iradio_flat-blue'
+            });
         }
 
     });
