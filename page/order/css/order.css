@@ -13,15 +13,6 @@
     padding-bottom: 10px;
 }
 
-.product .ui.selection.dropdown {
-    border-color: rgba(1, 2, 2, 1);
-    min-width: 120px;
-}
-
-.product .ui.selection.dropdown .menu {
-    border-color: rgba(1, 2, 2, 1);
-
-}
 
 .content h3 {
     font-size: 30px;

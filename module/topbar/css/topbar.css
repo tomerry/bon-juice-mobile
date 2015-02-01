@@ -43,10 +43,11 @@ body {
 }
 
 #widget_topbar .dialogbody {
-    margin: 70px 20px;
+    margin: 70px 20px 150px 20px;
     text-align: center;
 }
-#widget_topbar  .ui.form{
+
+#widget_topbar .ui.form {
     padding-bottom: 20px;
 }
 

@@ -3,7 +3,9 @@
 }
 
 .step {
-    border-bottom: 1px solid #4d4d4d;
+    border-bottom: 1px solid #d88d8d;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .content h3 {
@@ -11,7 +13,7 @@
     text-align: left;
     font-weight: bold;
     border-bottom: 1px solid #4d4d4d;
-
+    padding-bottom: 30px;
 }
 
 .product h4 {
@@ -28,4 +30,21 @@
 
 .product .price {
     font-size: 18px;
+}
+
+.address .button {
+    width: 100% !important;
+}
+
+.payment .field {
+    margin: 10px 0px;
+}
+
+.sure {
+    text-align: center;
+}
+
+.sure .button {
+    width: 180px !important;
+    margin-top: 50px;
 }

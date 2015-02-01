@@ -1,5 +1,5 @@
 var buildPath = "",
-    releasePath = "/bon-juice-mobile/";
+    releasePath = "/";
 
 fis.config.merge({
     roadmap: {

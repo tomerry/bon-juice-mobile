@@ -22,33 +22,153 @@
         <h3>
             结算
         </h3>
-        <div class="step">
 
+
+        <h4>
+            订单
+        </h4>
+
+        <div class="step">
+            <dl>
+                <dt>三天排毒清体×1</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
+            <dl>
+                <dt>礼品卡×1</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
+            <dl>
+                <dt>配送日期</dt>
+                <dd>--</dd>
+                <dd>--</dd>
+            </dl>
+            <dl>
+                <dt>小结</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
+            <dl>
+                <dt>优惠码</dt>
+                <dd>--</dd>
+            </dl>
+            <dl>
+                <dt>总计</dt>
+                <dd>￥ 690.00</dd>
+            </dl>
         </div>
 
         <h4>
             配送地址
         </h4>
-        <div class="step">
 
+        <div class="step address">
+            <div class="ui form">
+                <div class="field">
+                    <i class="add circle icon"></i> <label>添加新的配送地址</label>
+
+                </div>
+                <div class="field">
+                    <label>姓名</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>省份</label>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>城市</label>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>地区</label>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="1" class="item">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>街道地址</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>联系电话</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>优惠码</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <label>其他备注</label>
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+
+                <div class="ui orange button big">保存配送地址</div>
+            </div>
         </div>
 
         <h4>
             选择配送日期
         </h4>
-        <div class="step">
 
+        <div class="step">
+            <p>每日清晨新鲜压榨</p>
+
+            <p>请于收到后</p>
         </div>
 
         <h4>
             付款方式
         </h4>
 
-        <div class="step">
+        <div class="step payment">
+            <p>请选择付款方式</p>
 
+            <div class="field">
+                <div class="ui">
+                    <input type="radio" id="p3a1" name="payment" value="1" checked>
+                    <label for="p3a1">微信支付</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui">
+                    <input type="radio" id="p3a2" name="payment" value="2">
+                    <label for="p3a2">礼品卡</label>
+                </div>
+            </div>
         </div>
 
-        <div class="step">
+        <div class="step sure">
+            <div class="ui orange button big">确认下单</div>
 
         </div>
     </div>
