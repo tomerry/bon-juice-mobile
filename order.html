@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta name="format-detection" content="address=no;">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>订单</title>
+    <link rel="stylesheet" type="text/css" class="ui" href="/bon-juice-mobile/css/aio.css">
+    <style type="text/css" class="ui">.content {
+    margin: 0px 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.product {
+    border-bottom: 1px solid #4d4d4d;
+    padding-bottom: 10px;
+}
+
+.product .ui.selection.dropdown {
+    border-color: rgba(1, 2, 2, 1);
+    min-width: 120px;
+}
+
+.product .ui.selection.dropdown .menu {
+    border-color: rgba(1, 2, 2, 1);
+
+}
+
+.content h3 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product h4 {
+    font-size: 20px;
+    margin: 1rem 0px;
+    font-weight: bold;
+}
+
+.product h5 {
+    color: #f7a132;
+    margin: 10px 0px;
+}
+
+.product p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+.product .price {
+    font-size: 18px;
+}
+
+.product .gift {
+    margin: 15px 0px;
+    position: relative;
+}
+
+.product .gift .buycount {
+    position: absolute;
+    top: -14px;
+    right: 0px;
+}
+
+.product .gift .buyprice .field {
+    margin: 10px 0px;
+}
+
+.checkout {
+    text-align: right;
+    padding-top:10px;
+    border-top: 1px solid #4d4d4d;
+}
+
+.checkout .button {
+    margin-top: 10px;
+}
+
+.checkout .total{
+    padding-right: 20px;
+}</style>
+</head>
+<body>
+<style type="text/css" class="ui">body {
+    padding-top: 60px;
+}
+
+.topbar {
+    height: 50px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 10px;
+    z-index: 1000;
+}
+
+.topbar-inner {
+    margin: 10px 20px;
+    overflow: hidden;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.topbar-menu {
+    float: left;
+}
+
+.topbar-user {
+    float: right;
+}
+
+#widget_topbar .close {
+    position: absolute;
+    top: -40px;
+    right: 18px;
+    font-size: 14px;
+    line-height: 30px;
+    width: 50px;
+    text-align: right;
+    z-index: 4000;
+    padding: 50px 0px;
+}
+
+#widget_topbar .dialogbody {
+    margin: 70px 20px;
+    text-align: center;
+}
+#widget_topbar  .ui.form{
+    padding-bottom: 20px;
+}
+
+.topbar-mask {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    opacity: 0.95;
+    background-color: #ffffff;
+    z-index: 3000;
+}
+
+.topbar-user .logined {
+    line-height: 25px;
+    font-size: 15px;
+    padding: 4px 1px 0px 1px;
+    border-bottom: 1px solid #8d8d8d;
+    display: none;
+}
+
+.topbar-login {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 3001;
+}
+
+
+.topbar-login .reget, .topbar-login .register {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.topbar-login .register {
+    color: #f7a132;
+}
+
+.topbar-login h3 {
+    font-size: 25px;
+}
+
+.topbar-login h4 {
+    padding-bottom: 1rem;
+}
+.topbar-menu {
+    margin-right: 25px;
+    text-align: left;
+}
+
+.topbar-menu i.menu {
+    background-position: -2px -23px;
+    -webkit-transition: -webkit-transform 500ms;
+}
+
+.topbar-menu i.menu.rotate {
+    -webkit-transform: rotate(90deg);
+}
+
+
+.topbar-menu-body {
+    display: none;
+    position: fixed;
+    top: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #f6a231;
+    z-index: 3000;
+}
+
+.topbar-menu ul {
+    margin: 0px;
+    padding-left: 20px;
+}
+
+.topbar-menu li {
+    text-align: left;
+    list-style: none;
+    color: #ffffff;
+    padding-bottom: 25px;
+}
+
+.topbar-reget {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 3001;
+}
+
+.topbar-reget .orange.button {
+    background-color: #f7a132;
+    width: 9rem;
+    margin-bottom: 14px;
+}
+
+.topbar-reget h3 {
+    font-size: 25px;
+}
+
+.topbar-reget h4 {
+    padding-bottom: 1rem;
+}
+
+.topbar-reget .dialogbody {
+    margin-top: 50px !important;
+}
+
+.topbar-reget h3 {
+    margin-top: 10px;
+}
+.topbar-register {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 3001;
+}
+
+.topbar-register .orange.button {
+    background-color: #f7a132;
+    width: 9rem;
+    margin-bottom: 14px;
+}
+
+.topbar-register .login {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #f7a132;
+}
+
+.topbar-register h3 {
+    font-size: 25px;
+}
+
+.topbar-register h4 {
+    padding-bottom: 1rem;
+}
+
+.topbar-register .dialogbody {
+    margin-top: 50px !important;
+}
+
+.topbar-register h3 {
+    margin-top: 10px;
+}
+.topbar-share {
+    display: inline-block;
+}
+
+.topbar-share i {
+    margin-right: 10px;
+}
+
+.topbar-share i.weixin {
+    background-position: -2px 2px;
+}
+
+.topbar-share i.weibo {
+    background-position: -31px -24px;
+}
+
+.topbar-share i.snap {
+    background-position: -36px 3px;
+}
+
+
+.topbar-user span {
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.topbar-user span:nth-of-type(1){
+    margin-right: 10px;
+}
+</style>
+<div id="widget_topbar">
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-menu">
+                <i class="menu bonicon"></i>
+                <div class="topbar-menu-body">
+                    <i class="logo bonicon"></i>
+                    <ul>
+                        <li>
+                            主页
+                        </li>
+                        <li>
+                            BON JUICE
+                        </li>
+                        <li>
+                            排毒清体
+                        </li>
+                        <li>
+                            常见问题
+                        </li>
+                        <li>
+                            关于我们
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="topbar-user">
+                <div class="notlogin">
+                    <span class="login">登录</span>
+                    <span class="register">注册</span>
+                </div>
+                <div class="logined">
+                    John.Doe
+                </div>
+            </div>
+            <div class="topbar-share">
+                <i class="weixin bonicon"></i>
+                <i class="weibo bonicon"></i>
+                <i class="snap bonicon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="topbar-login section">
+        <div class="close">
+            关闭
+        </div>
+        <div class="dialogbody">
+            <i class="logo2 bonicon"></i>
+
+            <h3>欢迎回来</h3>
+            <h4>登录</h4>
+
+            <div class="ui form">
+                <div class="field">
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <input placeholder="输入密码" name="password" type="password">
+                </div>
+                <div class="ui orange button big">登录</div>
+                <div class="register">
+                    免费注册
+                </div>
+                <div class="reget">
+                    忘记密码?
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topbar-register section">
+        <div class="close">关闭</div>
+        <div class="dialogbody">
+            <h3>创建新账号</h3>
+            <h4>注册</h4>
+
+            <div class="ui form">
+                <div class="field">
+                    <input placeholder="输入手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <input placeholder="输入密码" name="password" type="password">
+                </div>
+                <div class="field">
+                    <input placeholder="输入密码" name="password" type="password">
+                </div>
+                <div class="field">
+                    <input placeholder="输入密码" name="password" type="password">
+                </div>
+                <div class="ui orange button big">提交</div>
+
+                <div class="login">
+                    登录已有账号
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topbar-reget section">
+
+        <div class="close">
+            关闭
+        </div>
+        <div class="dialogbody">
+            <h3>忘记密码</h3>
+            <h4>重置密码</h4>
+
+            <div class="ui form">
+                <div class="field">
+                    <input placeholder="手机号码" name="mobile" type="text">
+                </div>
+                <div class="field">
+                    <input placeholder="验证码" name="password" type="password">
+                </div>
+                <div class="field">
+                    <input placeholder="密码" name="password" type="password">
+                </div>
+                <div class="field">
+                    <input placeholder="确认密码" name="password" type="password">
+                </div>
+                <div class="ui orange button big">提交</div>
+            </div>
+        </div>
+    </div>
+    <div class="topbar-mask">
+    </div>
+</div>
+
+
+
+<div id="order_page_view" class="viewport">
+    <div class="content">
+        <h3>
+            选购我们的果蔬汁
+        </h3>
+
+        <div class="product" id="p1">
+            <img src="/bon-juice-mobile/img/p1.jpg">
+
+            <p class="price">￥690</p>
+            <h4>三天排毒清体</h4>
+
+            <p>纯天然果蔬原料，科学营养搭配，低温冷压榨取。</p>
+
+            <p>每日六瓶，代替三餐，保证每日所需营养物质， 让你的身体回归自然。</p>
+
+            <p>每月三天，我们为你的健康尽心尽力。</p>
+            <h4>数量</h4>
+
+            <div class="field buycount">
+                <div class="ui selection dropdown">
+                    <div class="default text">1</div>
+                    <i class="dropdown icon"></i>
+                    <input type="hidden" name="hidden-field">
+
+                    <div class="menu" tabindex="-1">
+                        <div data-value="1" class="item">1</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                    </div>
+                </div>
+            </div>
+            <h5>￥690</h5>
+        </div>
+
+        <h4>
+            选购其它产品
+        </h4>
+
+        <div class="product" id="p2">
+            <img src="/bon-juice-mobile/img/p2.jpg">
+
+            <p class="price">￥280</p>
+            <h4>单日排毒清体</h4>
+
+            <p>只需一日，取出Bon Juice畅饮，远离油脂，足量的膳食纤维让肠胃通畅，改善体内pH环境，配合运动，健康唾手可得。</p>
+            <h4>数量</h4>
+
+            <div class="field buycount">
+                <div class="ui selection dropdown">
+                    <div class="default text">1</div>
+                    <i class="dropdown icon"></i>
+                    <input type="hidden" name="hidden-field">
+
+                    <div class="menu" tabindex="-1">
+                        <div data-value="1" class="item">1</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                    </div>
+                </div>
+            </div>
+            <h5>￥690</h5>
+        </div>
+
+        <div class="product" id="p3">
+            <img src="/bon-juice-mobile/img/gift.jpg">
+
+            <p class="price">￥280~4140</p>
+            <h4>礼品券</h4>
+
+            <p>- 单日纤体礼品卡（￥280），</p>
+
+            <p>- 三天清体礼品卡（￥690）</p>
+
+            <p>- 半年卡（￥4140） </p>
+
+            <p>- 一次性预订半年6套三天清体果汁，额外获赠1套三天清体套餐；</p>
+
+            <p>- 适合家庭，办公室，年会活动等多人分享 </p>
+
+            <div class="gift">
+                <div class="buycount">
+                    <h4>数量</h4>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="2" class="item">2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buyprice">
+                    <h4>选择</h4>
+
+                    <div class="field">
+                        <div class="ui  ">
+                            <input type="radio" id="p3a1" name="p3price" value="1" checked>
+                            <label for="p3a1">￥ 280</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui  ">
+                            <input type="radio" id="p3a2" name="p3price" value="2">
+                            <label for="p3a2">￥ 690</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui  ">
+                            <input type="radio" id="p3a3" name="p3price" value="3">
+                            <label for="p3a3">￥ 4140</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="checkout">
+                <span class="total">小结：￥690.00 </span>
+
+                <div class="ui orange button big">结算</div>
+            </div>
+        </div>
+
+
+    </div>
+    <style type="text/css" class="ui">.footer {
+    margin-top: 10px;
+}
+
+.footer-inner {
+    border-top: 1px solid #ebebeb;
+    padding: 55px 20px 0px 20px;
+}
+
+.footer .logoarea {
+    height: 200px;
+    position: relative;
+    width: 100%;
+}
+
+.footer .logoarea .logo2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -35px;
+}
+
+.footer .about, .footer .contract, .footer .explore, .footer .social, .footer .copyright {
+    margin: 20px 0px;
+}
+.footer .about p{
+    line-height: 25px;
+}
+
+.footer .explore ul {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer .explore li {
+    list-style: none;
+    float: left;
+    margin-right: 16px;
+    line-height: 30px;
+}
+
+.footer .social dl {
+    overflow: hidden;
+}
+
+.footer .social dt {
+    float: left;
+    margin-right: 20px;
+}
+
+.footer .social i.weixin {
+    background-position: -2px 2px;
+}
+
+.footer .social i.weibo {
+    background-position: -31px -24px;
+}
+
+.footer .social i.snap {
+    background-position: -36px 3px;
+}
+
+.footer .copyright {
+    font-size: 12px;
+}
+
+.footer .copyright span {
+    padding-left: 20px;
+}
+
+.footer {
+    padding-bottom: 20px;
+}</style>
+<div class="footer" id="widget_footer">
+    <div class="logoarea">
+        <i class="logo2 bonicon"></i>
+    </div>
+    <div class="footer-inner">
+
+        <div class="about">
+            <h3>ABOUT BON JUICE</h3>
+            <p>Bon Juice坚持选用全程可溯源新鲜果蔬，坚 持清晨压榨当日配送，坚持使用可回收环保 包装。我们所做的一切，都是希望为你带来更新鲜，更自由的生活。</p>
+        </div>
+        <div class="contract">
+            <h3>CONTRACT</h3>
+
+            <p>400-034-4300 </p>
+
+            <p>9:00 am - 6:00 pm （周一至周五）</p>
+        </div>
+        <div class="explore">
+            <h3>EXPLORE</h3>
+            <ul>
+                <li>首页</li>
+                <li>BON JUICE</li>
+                <li>排毒清体</li>
+                <li>常见问题</li>
+                <li>关于我们</li>
+            </ul>
+
+        </div>
+        <div class="social">
+            <h3>SOCIAL</h3>
+            <dl>
+                <dt><i class="weixin bonicon"></i></dt>
+                <dt><i class="weibo bonicon"></i></dt>
+                <dt><i class="snap bonicon"></i></dt>
+            </dl>
+        </div>
+        <div class="copyright">
+            <p>© 2015 BONJUICE <span>京ICP备14021583号</span></p>
+        </div>
+    </div>
+</div>
+</div>
+<script src="/bon-juice-mobile/js/aio.js"></script>
+<script>(function($){
+
+    bonjuice.view.page_order = Backbone.View.extend({
+
+        el: "#order_page_view",
+
+        initialize : function() {
+            this.render();
+        },
+
+        render: function() {
+            var t = new bonjuice.view.widget_topbar();
+            this.$(".top").append(t.$el);
+
+            $('.ui.dropdown').dropdown();
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_flat-blue',
+                radioClass: 'iradio_flat-blue'
+            });
+        }
+
+    });
+
+})($);;
+(function ($) {
+
+    bonjuice.view.page_order_p1 = Backbone.View.extend({
+
+        el: "#p1"
+
+        , events: {
+            "click .checkout .button": "oncheckoutclick"
+        }
+
+        , oncheckoutclick: function () {
+            alert(1)
+        }
+
+
+    });
+
+})($);;
+(function ($) {
+
+    bonjuice.view.page_order_p2 = Backbone.View.extend({
+
+        el: "#p2"
+
+        , events: {
+            "click .checkout .button": "oncheckoutclick"
+        }
+
+        , oncheckoutclick: function () {
+            alert(1)
+        }
+
+
+    });
+
+})($);;
+(function ($) {
+
+    bonjuice.view.page_order_p3 = Backbone.View.extend({
+
+        el: "#p3"
+
+        , events: {
+            "click .checkout .button": "oncheckoutclick"
+        }
+
+        , oncheckoutclick: function () {
+
+            // todo
+            window.location.href="checkout.html";
+        }
+
+
+    });
+
+})($);;
+$(document).ready(function(){
+
+    new bonjuice.view.page_order();
+    new bonjuice.view.page_order_p1();
+    new bonjuice.view.page_order_p2();
+    new bonjuice.view.page_order_p3();
+
+});</script>
+</body>
+</html>
