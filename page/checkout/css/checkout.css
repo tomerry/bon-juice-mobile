@@ -2,12 +2,30 @@
     margin: 0px 20px;
 }
 
-.product img {
-    width: 100%;
-    height: auto;
-    text-align: center;
+.step {
+    border-bottom: 1px solid #4d4d4d;
 }
 
-.product {
+.content h3 {
+    font-size: 30px;
+    text-align: left;
+    font-weight: bold;
     border-bottom: 1px solid #4d4d4d;
+
+}
+
+.product h4 {
+    font-size: 20px;
+    margin: 1rem 0px;
+    font-weight: bold;
+}
+
+.product p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+.product .price {
+    font-size: 18px;
 }

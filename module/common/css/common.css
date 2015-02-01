@@ -13,7 +13,6 @@ body {
     height: 100%;
 }
 
-
 i.bonicon {
     background-image: url(/module/common/img/bonjuice.png);
     background-repeat: no-repeat;
@@ -42,4 +41,10 @@ i.logo2 {
     -webkit-background-size: 80px auto;
     height: 70px;
     width: 80px;
+}
+
+.orange.button {
+    background-color: #f7a132 !important;
+    width: 9rem !important;
+    margin-bottom: 14px !important;
 }

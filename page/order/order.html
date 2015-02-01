@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta name="format-detection" content="address=no;">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <title>订单</title>
+    <link rel="stylesheet" type="text/css" class="ui" href="/module/main/aio.css">
+    <link rel="stylesheet" type="text/css" class="ui" href="./css/order.css?__inline">
+</head>
+<body>
+<!--inline[/module/topbar/tpl/topbar.tpl.html]-->
+<div id="order_page_view" class="viewport">
+    <div class="content">
+        <h3>
+            选购我们的果蔬汁
+        </h3>
+
+        <div class="product" id="p1">
+            <img src="/module/common/img/p1.jpg">
+
+            <p class="price">￥690</p>
+            <h4>三天排毒清体</h4>
+
+            <p>纯天然果蔬原料，科学营养搭配，低温冷压榨取。</p>
+
+            <p>每日六瓶，代替三餐，保证每日所需营养物质， 让你的身体回归自然。</p>
+
+            <p>每月三天，我们为你的健康尽心尽力。</p>
+            <h4>数量</h4>
+
+            <div class="field buycount">
+                <div class="ui selection dropdown">
+                    <div class="default text">1</div>
+                    <i class="dropdown icon"></i>
+                    <input type="hidden" name="hidden-field">
+
+                    <div class="menu" tabindex="-1">
+                        <div data-value="1" class="item">1</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                    </div>
+                </div>
+            </div>
+            <h5>￥690</h5>
+        </div>
+
+        <h4>
+            选购其它产品
+        </h4>
+
+        <div class="product" id="p2">
+            <img src="/module/common/img/p2.jpg">
+
+            <p class="price">￥280</p>
+            <h4>单日排毒清体</h4>
+
+            <p>只需一日，取出Bon Juice畅饮，远离油脂，足量的膳食纤维让肠胃通畅，改善体内pH环境，配合运动，健康唾手可得。</p>
+            <h4>数量</h4>
+
+            <div class="field buycount">
+                <div class="ui selection dropdown">
+                    <div class="default text">1</div>
+                    <i class="dropdown icon"></i>
+                    <input type="hidden" name="hidden-field">
+
+                    <div class="menu" tabindex="-1">
+                        <div data-value="1" class="item">1</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                        <div data-value="2" class="item">2</div>
+                    </div>
+                </div>
+            </div>
+            <h5>￥690</h5>
+        </div>
+
+        <div class="product" id="p3">
+            <img src="/module/common/img/gift.jpg">
+
+            <p class="price">￥280~4140</p>
+            <h4>礼品券</h4>
+
+            <p>- 单日纤体礼品卡（￥280），</p>
+
+            <p>- 三天清体礼品卡（￥690）</p>
+
+            <p>- 半年卡（￥4140） </p>
+
+            <p>- 一次性预订半年6套三天清体果汁，额外获赠1套三天清体套餐；</p>
+
+            <p>- 适合家庭，办公室，年会活动等多人分享 </p>
+
+            <div class="gift">
+                <div class="buycount">
+                    <h4>数量</h4>
+
+                    <div class="ui selection dropdown">
+                        <div class="default text">1</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="hidden-field">
+
+                        <div class="menu" tabindex="-1">
+                            <div data-value="1" class="item">1</div>
+                            <div data-value="2" class="item">2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buyprice">
+                    <h4>选择</h4>
+
+                    <div class="field">
+                        <div class="ui  ">
+                            <input type="radio" id="p3a1" name="p3price" value="1" checked>
+                            <label for="p3a1">￥ 280</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui  ">
+                            <input type="radio" id="p3a2" name="p3price" value="2">
+                            <label for="p3a2">￥ 690</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui  ">
+                            <input type="radio" id="p3a3" name="p3price" value="3">
+                            <label for="p3a3">￥ 4140</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="checkout">
+                <span class="total">小结：￥690.00 </span>
+
+                <div class="ui orange button big">结算</div>
+            </div>
+        </div>
+
+
+    </div>
+    <!--inline[/module/footer/tpl/footer.tpl.html]-->
+</div>
+<script src="/module/main/aio.js"></script>
+<script src="js/startup.js?__inline"></script>
+</body>
+</html>

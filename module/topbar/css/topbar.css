@@ -11,6 +11,7 @@ body {
     width: 100%;
     border-bottom: 1px solid #ebebeb;
     margin-bottom: 10px;
+    z-index: 1000;
 }
 
 .topbar-inner {
