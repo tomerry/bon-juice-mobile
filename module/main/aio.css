@@ -1,4 +1,3 @@
+@import url('/_module/normalize/normalize.css?__inline');
 @import url('/_module/semantic/semantic.css?__inline');
 @import url('/module/common/css/common.css?__inline');
-@import url('/module/topbar/css/topbar.css?__inline');
-@import url('/module/footer/css/footer.css?__inline');

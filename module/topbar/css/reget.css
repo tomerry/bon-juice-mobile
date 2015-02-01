@@ -1,9 +1,32 @@
-.topbar-reget{
+
+.topbar-reget {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0px;
-    bottom: 0px;
-    right: 0px;
     left: 0px;
+    height: 100%;
+    width: 100%;
     z-index: 3001;
+}
+
+.topbar-reget .orange.button {
+    background-color: #f7a132;
+    width: 9rem;
+    margin-bottom: 14px;
+}
+
+.topbar-reget h3 {
+    font-size: 25px;
+}
+
+.topbar-reget h4 {
+    padding-bottom: 1rem;
+}
+
+.topbar-reget .dialogbody {
+    margin-top: 50px !important;
+}
+
+.topbar-reget h3 {
+    margin-top: 10px;
 }

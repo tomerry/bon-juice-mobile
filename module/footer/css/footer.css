@@ -1,0 +1,71 @@
+.footer {
+    margin-top: 10px;
+}
+
+.footer-inner {
+    border-top: 1px solid #ebebeb;
+    padding: 55px 20px 0px 20px;
+}
+
+.footer .logoarea {
+    height: 200px;
+    position: relative;
+    width: 100%;
+}
+
+.footer .logoarea .logo2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -35px;
+}
+
+.footer .about, .footer .contract, .footer .explore, .footer .social, .footer .copyright {
+    margin: 20px 0px;
+}
+.footer .about p{
+    line-height: 25px;
+}
+
+.footer .explore ul {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+.footer .explore li {
+    list-style: none;
+    float: left;
+    margin-right: 16px;
+    line-height: 30px;
+}
+
+.footer .social dl {
+    overflow: hidden;
+}
+
+.footer .social dt {
+    float: left;
+    margin-right: 20px;
+}
+
+.footer .social i.weixin {
+    background-position: -2px 2px;
+}
+
+.footer .social i.weibo {
+    background-position: -31px -24px;
+}
+
+.footer .social i.snap {
+    background-position: -36px 3px;
+}
+
+.footer .copyright {
+    font-size: 12px;
+}
+
+.footer .copyright span {
+    padding-left: 20px;
+}

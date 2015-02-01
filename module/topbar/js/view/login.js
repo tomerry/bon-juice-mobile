@@ -1,20 +1,15 @@
 (function ($) {
 
     bonjuice.view.widget_topbar_login = Backbone.View.extend({
-        tpl: _.template(__inline("../../tpl/login.tpl.html"))
+
+        el: $(".topbar-login")
 
         , events: {
             "click .reget": "onregetclick"
             , "click .register": "onregisterclick"
-            , "click .close": "oncloseclick"
-        }
-
-        , oncloseclick: function () {
-            this.$(".topbar-login").hide();
         }
 
         , initialize: function () {
-            this.render();
             this.bind();
         }
 
@@ -23,26 +18,19 @@
         }
 
         , onshow: function () {
-            this.$(".topbar-login").show();
+            this.show();
         }
 
         , onregetclick: function () {
             var me = this;
-            me.$(".topbar-login").hide();
+            me.hide();
             $(document).trigger("topbar:regetclick");
         }
 
         , onregisterclick: function () {
             var me = this;
-            me.$(".topbar-login").hide();
+            me.hide();
             $(document).trigger("topbar:registerclick");
-        }
-
-
-        , render: function () {
-            var me = this;
-
-            me.$el.html($(me.tpl({})))
         }
     });
 

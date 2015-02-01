@@ -2,26 +2,20 @@
 
     bonjuice.view.widget_topbar_register = Backbone.View.extend({
 
-        tpl: _.template(__inline("../../tpl/register.tpl.html"))
+        el: $(".topbar-register")
 
         , events: {
             "click .login": "onloginclick"
-            , "click .close": "oncloseclick"
-        }
-
-        , oncloseclick: function () {
-            this.$(".topbar-register").hide();
         }
 
         , onloginclick: function () {
             var me = this;
-            me.$(".topbar-register").hide();
+            me.hide();
             $(document).trigger("topbar:loginclick");
         }
 
 
         , initialize: function () {
-            this.render();
             this.bind();
         }
 
@@ -30,14 +24,9 @@
         }
 
         , onshow: function () {
-            this.$(".topbar-register").show();
+            this.show();
         }
 
-        , render: function () {
-            var me = this;
-
-            me.$el.html($(me.tpl({})))
-        }
     });
 
 })($);

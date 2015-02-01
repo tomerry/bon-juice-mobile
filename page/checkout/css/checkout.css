@@ -1,0 +1,13 @@
+.content {
+    margin: 0px 20px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.product {
+    border-bottom: 1px solid #4d4d4d;
+}

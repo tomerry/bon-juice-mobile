@@ -1,9 +1,38 @@
 .topbar-register {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0px;
-    bottom: 0px;
-    right: 0px;
     left: 0px;
+    height: 100%;
+    width: 100%;
     z-index: 3001;
+}
+
+.topbar-register .orange.button {
+    background-color: #f7a132;
+    width: 9rem;
+    margin-bottom: 14px;
+}
+
+.topbar-register .login {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: #f7a132;
+}
+
+.topbar-register h3 {
+    font-size: 25px;
+}
+
+.topbar-register h4 {
+    padding-bottom: 1rem;
+}
+
+.topbar-register .dialogbody {
+    margin-top: 50px !important;
+}
+
+.topbar-register h3 {
+    margin-top: 10px;
 }

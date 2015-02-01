@@ -1,31 +1,59 @@
 (function ($) {
     bonjuice.view.widget_topbar = Backbone.View.extend({
 
-        className: "topbar-wrapper",
+        el: "#widget_topbar"
 
-        tpl: _.template(__inline("../../tpl/topbar.tpl.html")),
-
-        events: {
-
-        },
-
-        initialize: function () {
-
+        , initialize: function () {
+            this.canClick = true;
             this.render();
-        },
+        }
 
-        render: function () {
+        , events: {
+            "click .login": "onloginclick"
+            , "click .register": "onregisterclick"
+            , "touchstart .close": "oncloseclick"
+            , "click .close": "oncloseclick"
+        }
+
+        , oncloseclick: function () {
             var me = this;
-            me.$el.html($(me.tpl()))
+            if (!me.canClick)
+                return;
+            me.$(".section").hide();
+            me.$(".topbar-mask").hide();
+            $(".viewport").show();
+            me.canClick = false;
+            setTimeout(function () {
+                me.canClick = true;
+            }, 500);
+        }
 
-            var menu=new bonjuice.view.widget_topbar_menu();
-            me.$(".topbar-menu-wrapper").append(menu.$el);
 
-            var share=new bonjuice.view.widget_topbar_share();
-            me.$(".topbar-share-wrapper").append(share.$el);
+        , onregisterclick: function () {
+            var me = this;
+            if (!me.canClick)
+                return;
+            me.$(".topbar-mask").show();
+            $(".viewport").hide();
+            $(document).trigger("topbar:registerclick");
+        }
 
-            var user=new bonjuice.view.widget_topbar_user();
-            me.$(".topbar-user-wrapper").append(user.$el);
+        , onloginclick: function () {
+            var me = this;
+            if (!me.canClick)
+                return;
+            me.$(".topbar-mask").show();
+            $(".viewport").hide();
+            $(document).trigger("topbar:loginclick");
+        }
+
+        , render: function () {
+            var me = this;
+            var menu = new bonjuice.view.widget_topbar_menu();
+            var share = new bonjuice.view.widget_topbar_share();
+            var login = new bonjuice.view.widget_topbar_login();
+            var register = new bonjuice.view.widget_topbar_register();
+            var reget = new bonjuice.view.widget_topbar_reget();
         }
 
     });

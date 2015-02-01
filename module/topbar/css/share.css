@@ -1,0 +1,19 @@
+.topbar-share {
+    display: inline-block;
+}
+
+.topbar-share i {
+    margin-right: 10px;
+}
+
+.topbar-share i.weixin {
+    background-position: -2px 2px;
+}
+
+.topbar-share i.weibo {
+    background-position: -31px -24px;
+}
+
+.topbar-share i.snap {
+    background-position: -36px 3px;
+}

@@ -1,21 +1,12 @@
 (function ($) {
-    bonjuice.view.widget_topbar_share= Backbone.View.extend({
+    bonjuice.view.widget_topbar_share = Backbone.View.extend({
 
-        tpl: _.template(__inline("../../tpl/share.tpl.html")),
+        el: $(".topbar-share")
 
-        events: {
+        , events: {}
 
-        },
+        , initialize: function () {
 
-        initialize: function () {
-            this.render();
-        },
-
-        render: function () {
-            var me = this;
-
-            me.$el.html($(me.tpl({})))
         }
-
     });
 })($);

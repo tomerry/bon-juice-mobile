@@ -1,9 +1,35 @@
 .topbar-login {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0px;
-    bottom: 0px;
-    right: 0px;
     left: 0px;
+    height: 100%;
+    width: 100%;
     z-index: 3001;
+}
+
+
+
+.topbar-login .orange.button {
+    background-color: #f7a132;
+    width: 9rem;
+    margin-bottom: 14px;
+}
+
+.topbar-login .reget, .topbar-login .register {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.topbar-login .register {
+    color: #f7a132;
+}
+
+.topbar-login h3 {
+    font-size: 25px;
+}
+
+.topbar-login h4 {
+    padding-bottom: 1rem;
 }
