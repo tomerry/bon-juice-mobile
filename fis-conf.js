@@ -47,12 +47,19 @@ fis.config.merge({
                     /* inline js，单行过长，可能导致smarty解析失败，所以设置最大行大小 */
                     max_line_len: 500
                 }
-            }, 'clean-css': {
+            }
+            , 'clean-css': {
                 keepBreaks: true
             }
         }
     }
 });
+
+//后缀名的less的文件使用fis-parser-less编译
+//modules.parser.less表示设置后缀名为less的文件的parser，第二个less表示使用fis-parser-less进行编译
+fis.config.set('modules.parser.less', 'less');
+//将less文件编译为css
+fis.config.set('roadmap.ext.less', 'css');
 
 //fis.config.del('modules.optimizer.html');
 

@@ -49,6 +49,12 @@ i.logo2 {
     margin-bottom: 14px !important;
 }
 
+.clickable {
+    color: #f7a132;
+    padding: 0px 2px 5px 2px;
+    border-bottom: 1px solid #f7a132;
+}
+
 div.viewport .ui.selection.dropdown {
     border-color: rgba(1, 2, 2, 1);
     min-width: 120px;

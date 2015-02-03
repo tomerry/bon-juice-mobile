@@ -1,0 +1,121 @@
+@time: 0.5s;
+
+.transition(@props) {
+  -webkit-transition: @props;
+  -moz-transition: @props;
+  -ms-transition: @props;
+  -o-transition: @props;
+  transition: @props;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+.noselect {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.vertical-padding(@size: 5px) {
+  padding-top: @size;
+  padding-bottom: @size;
+}
+
+.widget-calendar {
+  margin: 0 auto;
+  .clndr {
+    overflow: hidden;
+    background-color: #efefef;
+    .controls {
+      padding-bottom: 10px;
+      padding-top: 10px;
+      border-bottom: 1px solid #a2a2a2;
+      .clndr-previous-button {
+        float: left;
+      }
+      .clndr-next-button {
+        float: right;
+      }
+      .clndr-previous-button, .clndr-next-button {
+        width: 14%;
+        .vertical-padding;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        .noselect;
+        .transition(background-color @time);
+      }
+      .month {
+        width: 70%;
+        .vertical-padding;
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+    .days-container {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+      .clearfix;
+      .days {
+        width: 100%;
+        overflow: hidden;
+        .transition(left @time);
+        .day.today {
+          background-color: #f8a032;
+          color: #ffffff;
+        }
+        .day.notday {
+          color: #bdbdbd;
+        }
+        .day, .empty {
+          width: 14.2%;
+          display: inline-block;
+          .vertical-padding(8px);
+          float: left;
+
+          font-size: 12px;
+          // font-weight: 700;
+          text-align: center;
+
+          &.adjacent-month {
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+
+        .empty {
+          height: 31px;
+          vertical-align: bottom;
+        }
+
+        .headers {
+          .vertical-padding;
+          font-weight: bold;
+          overflow: hidden;
+
+          .day-header {
+            width: 14.2%;
+            display: inline-block;
+            text-align: center;
+            float: left;
+          }
+        }
+      }
+
+    }
+  }
+}

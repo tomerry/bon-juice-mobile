@@ -11,13 +11,14 @@
 .product {
     border-bottom: 1px solid #4d4d4d;
     padding-bottom: 10px;
+    padding-top: 20px;
 }
-
 
 .content h3 {
     font-size: 30px;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0px;
 }
 
 .product h4 {
@@ -58,7 +59,7 @@
 
 .checkout {
     text-align: right;
-    padding-top:10px;
+    padding-top: 10px;
     border-top: 1px solid #4d4d4d;
 }
 
@@ -66,6 +67,6 @@
     margin-top: 10px;
 }
 
-.checkout .total{
+.checkout .total {
     padding-right: 20px;
 }

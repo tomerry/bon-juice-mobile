@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" class="ui" href="../css/calendar.less?__inline">
+
+<div class="controls">
+    <div class="clndr-previous-button">&lsaquo;</div>
+    <div class="clndr-next-button">&rsaquo;</div>
+    <div class="month"><%= month %> <%= year %></div>
+</div>
+
+<div class="days-container">
+    <div class="days">
+        <div class="headers">
+            <% _.each(daysOfTheWeek, function(day) { %>
+            <div class="day-header">
+                <%= day %>
+            </div>
+            <% }); %>
+        </div>
+        <% _.each(days, function(day) { %>
+        <div class="<%= day.classes %> <% if(/calendar-dow-[5|6|0]/i.test(day.classes)){ %>notday<% } %>" id="<%= day.id %>">
+            <span><%= day.day %></span>
+        </div>
+        <% }); %>
+    </div>
+</div>

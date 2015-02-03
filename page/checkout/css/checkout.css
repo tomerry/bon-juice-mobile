@@ -16,32 +16,27 @@
     padding-bottom: 30px;
 }
 
-.product h4 {
-    font-size: 20px;
-    margin: 1rem 0px;
-    font-weight: bold;
-}
-
-.product p {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 0px;
-}
-
-.product .price {
-    font-size: 18px;
-}
-
 .address .button {
     width: 100% !important;
 }
 
-.payment .field {
-    margin: 10px 0px;
+.step .field {
+    margin: 20px 0px!important;
 }
 
 .sure {
     text-align: center;
+}
+
+.sure p{
+    text-align: left;
+    font-size: 14px;
+    color: #f7a132;
+    margin-bottom: 0px;
+}
+
+.sure.step{
+    border-bottom: none;
 }
 
 .sure .button {

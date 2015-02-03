@@ -62,9 +62,8 @@
 
         <div class="step address">
             <div class="ui form">
-                <div class="field">
-                    <i class="add circle icon"></i> <label>添加新的配送地址</label>
-
+                <div class="field" style="color:#f7a132">
+                    <i class="add circle icon" ></i> <span class="clickable">添加新地址</span>
                 </div>
                 <div class="field">
                     <label>姓名</label>
@@ -117,19 +116,19 @@
                 </div>
                 <div class="field">
                     <label>街道地址</label>
-                    <input placeholder="输入手机号码" name="mobile" type="text">
+                    <input name="mobile" type="text">
                 </div>
                 <div class="field">
                     <label>联系电话</label>
-                    <input placeholder="输入手机号码" name="mobile" type="text">
+                    <input name="mobile" type="text">
                 </div>
                 <div class="field">
                     <label>优惠码</label>
-                    <input placeholder="输入手机号码" name="mobile" type="text">
+                    <input name="mobile" type="text">
                 </div>
                 <div class="field">
                     <label>其他备注</label>
-                    <input placeholder="输入手机号码" name="mobile" type="text">
+                    <input name="mobile" type="text">
                 </div>
 
                 <div class="ui orange button big">保存配送地址</div>
@@ -144,6 +143,10 @@
             <p>每日清晨新鲜压榨</p>
 
             <p>请于收到后</p>
+
+            <div id="calendar">
+
+            </div>
         </div>
 
         <h4>
@@ -168,8 +171,8 @@
         </div>
 
         <div class="step sure">
+            <p>请选确认下单支付</p>
             <div class="ui orange button big">确认下单</div>
-
         </div>
     </div>
     <!--inline[/module/footer/tpl/footer.tpl.html]-->

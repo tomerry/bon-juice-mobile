@@ -71,6 +71,12 @@ body {
     display: none;
 }
 
+#widget_topbar .clickable1 {
+    color: #000000;
+    padding: 0px 2px 5px 2px;
+    border-bottom: 1px solid #000000;
+}
+
 @import url('./login.css?__inline');
 @import url('./menu.css?__inline');
 @import url('./reget.css?__inline');
