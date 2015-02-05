@@ -4,7 +4,7 @@
 
 .step {
     border-bottom: 1px solid #d88d8d;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     margin-bottom: 30px;
 }
 
@@ -21,21 +21,21 @@
 }
 
 .step .field {
-    margin: 20px 0px!important;
+    margin: 20px 0px !important;
 }
 
 .sure {
     text-align: center;
 }
 
-.sure p{
+.sure p {
     text-align: left;
     font-size: 14px;
     color: #f7a132;
     margin-bottom: 0px;
 }
 
-.sure.step{
+.sure.step {
     border-bottom: none;
 }
 

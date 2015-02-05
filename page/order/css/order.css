@@ -69,4 +69,6 @@
 
 .checkout .total {
     padding-right: 20px;
+    float: left;
+    margin-top: 24px;
 }

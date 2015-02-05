@@ -1,10 +1,10 @@
 (function ($) {
 
-    bonjuice.view.widget_topbar_reget = Backbone.View.extend({
+    bonjuice.view.widget_topbar_reget = bonjuice.view.extend({
 
         el: $(".topbar-reget")
 
-        , initialize: function () {
+        , init: function () {
             this.bind();
         }
 

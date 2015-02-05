@@ -1,10 +1,10 @@
 (function ($) {
 
-    bonjuice.view.page_checkout = Backbone.View.extend({
+    bonjuice.view.page_checkout = bonjuice.view.extend({
 
         el: "#checkout_page_view",
 
-        initialize: function () {
+        init: function () {
             this.render();
         },
 

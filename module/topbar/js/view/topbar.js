@@ -1,9 +1,9 @@
 (function ($) {
-    bonjuice.view.widget_topbar = Backbone.View.extend({
+    bonjuice.view.widget_topbar = bonjuice.view.extend({
 
         el: "#widget_topbar"
 
-        , initialize: function () {
+        , init: function () {
             this.canClick = true;
             this.render();
         }
@@ -11,8 +11,7 @@
         , events: {
             "click .login": "onloginclick"
             , "click .register": "onregisterclick"
-            , "touchstart .close": "oncloseclick"
-            , "click .close": "oncloseclick"
+            , "tap .close": "oncloseclick"
         }
 
         , oncloseclick: function () {

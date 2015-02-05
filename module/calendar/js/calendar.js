@@ -1,5 +1,5 @@
 (function ($) {
-    bonjuice.view.widget_calendar = Backbone.View.extend({
+    bonjuice.view.widget_calendar = bonjuice.view.extend({
 
         className: "widget-calendar"
 
@@ -9,7 +9,7 @@
 
         , tpl: __inline("../tpl/calendar.tpl.html")
 
-        , initialize: function () {
+        , init: function () {
 
             this.render();
 
@@ -18,6 +18,12 @@
         , ondayclick: function (e) {
             var me = this
                 , $el = $(e.currentTarget);
+
+            if (!$el.hasClass("notday") && !$el.hasClass("adjacent-month")) {
+                this.$(".checkedday").removeClass("checkedday");
+                this.$(".today").removeClass("today");
+                $el.addClass("checkedday");
+            }
 
         }
 

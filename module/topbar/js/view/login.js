@@ -1,6 +1,6 @@
 (function ($) {
 
-    bonjuice.view.widget_topbar_login = Backbone.View.extend({
+    bonjuice.view.widget_topbar_login = bonjuice.view.extend({
 
         el: $(".topbar-login")
 
@@ -9,7 +9,7 @@
             , "click .register": "onregisterclick"
         }
 
-        , initialize: function () {
+        , init: function () {
             this.bind();
         }
 

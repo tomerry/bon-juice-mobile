@@ -1,10 +1,10 @@
 (function($){
 
-    bonjuice.view.page_order = Backbone.View.extend({
+    bonjuice.view.page_order = bonjuice.view.extend({
 
         el: "#order_page_view",
 
-        initialize : function() {
+        init : function() {
             this.render();
         },
 
@@ -13,6 +13,7 @@
             this.$(".top").append(t.$el);
 
             $('.ui.dropdown').dropdown();
+
             $('input').iCheck({
                 checkboxClass: 'icheckbox_flat-blue',
                 radioClass: 'iradio_flat-blue'

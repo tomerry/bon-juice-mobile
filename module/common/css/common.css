@@ -56,21 +56,21 @@ i.logo2 {
 }
 
 div.viewport .ui.selection.dropdown {
-    border-color: rgba(1, 2, 2, 1);
+    /*border-color: rgba(1, 2, 2, 1);*/
     min-width: 120px;
     border-radius: 0px;
 }
 
 div.viewport .ui.selection.dropdown.visible {
-    border-color: rgba(1, 2, 2, 1);
+    /*border-color: rgba(1, 2, 2, 1);*/
 }
 
 div.viewport .ui.selection.dropdown .menu {
-    border-color: rgba(1, 2, 2, 1);
+    /*border-color: rgba(1, 2, 2, 1);*/
     border-radius: 0px;
 }
 
 div.viewport .ui.form input:not([type]), .ui.form input[type="text"], .ui.form input[type="email"], .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="password"], .ui.form input[type="number"], .ui.form input[type="url"], .ui.form input[type="tel"] {
-    border-color: rgba(1, 2, 2, 1);
+    /*border-color: rgba(1, 2, 2, 1);*/
     border-radius: 0px;
 }

@@ -1,5 +1,6 @@
 (function ($) {
-    bonjuice.view.widget_topbar_menu = Backbone.View.extend({
+
+    bonjuice.view.widget_topbar_menu = bonjuice.view.extend({
 
         el: $(".topbar-menu")
 
@@ -7,7 +8,7 @@
             "click .menu": "onmenuclick"
         }
 
-        , initialize: function () {
+        , init: function () {
             this.isShown = false;
         }
 
@@ -25,4 +26,5 @@
         }
 
     });
+
 })($);

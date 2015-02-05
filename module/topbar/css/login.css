@@ -9,11 +9,19 @@
 }
 
 
-.topbar-login .reget, .topbar-login .register {
+.topbar-login .register {
     margin-top: 10px;
     margin-bottom: 20px;
     /*text-decoration: underline;*/
 }
+
+.topbar-login .reget {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*text-decoration: underline;*/
+}
+
+
 
 .topbar-login .register {
     color: #f7a132;

@@ -1,11 +1,11 @@
 (function ($) {
-    bonjuice.view.widget_topbar_share = Backbone.View.extend({
+    bonjuice.view.widget_topbar_share = bonjuice.view.extend({
 
         el: $(".topbar-share")
 
         , events: {}
 
-        , initialize: function () {
+        , init: function () {
 
         }
     });

@@ -1,6 +1,6 @@
 (function ($) {
 
-    bonjuice.view.page_order_p3 = Backbone.View.extend({
+    bonjuice.view.page_order_p3 = bonjuice.view.extend({
 
         el: "#p3"
 

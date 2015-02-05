@@ -1,6 +1,6 @@
 (function ($) {
 
-    bonjuice.view.widget_topbar_register = Backbone.View.extend({
+    bonjuice.view.widget_topbar_register = bonjuice.view.extend({
 
         el: $(".topbar-register")
 
@@ -15,7 +15,7 @@
         }
 
 
-        , initialize: function () {
+        , init: function () {
             this.bind();
         }
 
